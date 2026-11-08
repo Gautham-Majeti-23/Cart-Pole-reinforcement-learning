@@ -79,8 +79,6 @@ Note that the model lives outside the training loop, so rerunning the loop conti
 
 The trained policy balances the pole for the full 500-step limit of `CartPole-v1`. During training, the average episode length per batch sits close to the 500-step cap, with a moving average of roughly 470 to 495 and regular dips in individual batches.
 
-![Training curve](training_curve.png)
-
 ## Notes and limitations
 
 - **Plain REINFORCE is noisy.** Even after the task is learned, performance wobbles from batch to batch, because the gradient estimate has high variance. Using a learned value baseline (actor-critic) or PPO would reduce this.
